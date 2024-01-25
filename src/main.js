@@ -1,12 +1,17 @@
-import Vue from "vue";
+import { createApp, configureCompat } from "vue";
+import { createStore } from "./store";
+import { createRouter } from "./router";
 import App from "./App.vue";
-import router from "./router";
-import store from "./store";
 
-Vue.config.productionTip = false;
+configureCompat({
+  MODE: 3,
+});
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+const router = createRouter();
+const store = createStore();
+
+const app = createApp(App);
+app.use(store);
+app.use(router);
+
+app.mount("#app");
