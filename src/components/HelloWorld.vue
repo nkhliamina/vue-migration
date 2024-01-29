@@ -12,26 +12,10 @@
     <ul>
       <li>
         <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
           href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
           target="_blank"
           rel="noopener"
           >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
-          target="_blank"
-          rel="noopener"
-          >vuex</a
         >
       </li>
       <li>
@@ -102,16 +86,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
-};
+<script setup>
+const props = defineProps(['msg'])
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h3 {
   margin: 40px 0 0;
