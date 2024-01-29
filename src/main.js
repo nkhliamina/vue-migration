@@ -1,11 +1,7 @@
-import { createApp, configureCompat } from "vue";
+import { createApp } from "vue";
 import { createStore } from "./store";
 import { createRouter } from "./router";
 import App from "./App.vue";
-
-configureCompat({
-  MODE: 3,
-});
 
 const router = createRouter();
 const store = createStore();

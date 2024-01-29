@@ -1,6 +1,6 @@
 module.exports = {
   chainWebpack: (config) => {
-    config.resolve.alias.set("vue", "@vue/compat");
+    config.resolve.alias.set("vue$", "vue/dist/vue.runtime.esm-bundler.js");
     config.plugin("define").tap((definitions) => {
       Object.assign(definitions[0], {
         __VUE_OPTIONS_API__: "true",
